@@ -29,15 +29,15 @@ function Komponens1(props) {
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Textarea1: </Form.Label>
-                    <Form.Control type="textarea" placeholder="text" value={props.tArea1} val="tArea1" onChange={(event) => setTArea1(event.target.value)}/>
+                    <Form.Control as="textarea" placeholder="text" value={props.tArea1} val="tArea1" onChange={(event) => setTArea1(event.target.value)}/>
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Textarea2: </Form.Label>
-                    <Form.Control type="textarea" placeholder="text" value={props.tArea2} val="tArea2" onChange={(event) => setTArea2(event.target.value)}/>
+                    <Form.Control as="textarea" placeholder="text" value={props.tArea2} val="tArea2" onChange={(event) => setTArea2(event.target.value)}/>
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Textarea3: </Form.Label>
-                    <Form.Control type="textarea" placeholder="text" value={props.tArea3} val="tArea3" onChange={(event) => setTArea3(event.target.value)}/>
+                    <Form.Control as="textarea" placeholder="text" value={props.tArea3} val="tArea3" onChange={(event) => setTArea3(event.target.value)}/>
                 </Form.Group>
             </Form>
             <Card style={{ width: '18rem', backgroundColor:"gray"}}>
