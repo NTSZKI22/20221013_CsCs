@@ -1,69 +1,55 @@
-import React, { Component } from 'react'
+import React from 'react'
+import {useState} from 'react'
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Select from 'react-select'
 
-class komponens1 extends Component {
-    state = {            
-        "Text": "",
-        "Checkbox": false,
-        "tArea1": "",
-        "tArea2": "",
-        "tArea3": "",
-    }
+function Komponens1(props) {
+    const [text, setText] = useState("");
+    const [checkbox, setCheckbox] = useState(false);
+    const [tArea1, setTArea1] = useState("");
+    const [tArea2, setTArea2] = useState("");
+    const [tArea3, setTArea3] = useState("");
 
-    updateCard = (event) => {
-        var set = event.target.value
-        if(event.target.__reactProps$69yrl3iaf4u.type === "checkbox"){
-            set = event.target.checked
-        }
-        this.setState({
-            [event.target.__reactProps$69yrl3iaf4u.val]: set,
-        })
-    }
-
-
-
-    render() { 
-        return (
+    return (
         <React.Fragment>
             <Form>
                 <Form.Group>
                     <Form.Label>Text: </Form.Label>
-                    <Form.Control type="text" placeholder="text" value={this.props.text} val="Text" onChange={this.updateCard.bind(this)}/>
+                    <Form.Control type="text" placeholder="text" id="Text" value={props.Text} val="Text" onChange={(event) => setText(event.target.value)}/>
                 </Form.Group>
                 <Select>
 
                 </Select>
                 <Form.Group>
                     <Form.Label>Checkbox: </Form.Label>
-                    <Form.Control type="checkbox" placeholder="text" checked={this.props.Checkbox} val="Checkbox" onChange={this.updateCard.bind(this)}/>
+                    <Form.Control type="checkbox" placeholder="text" checked={props.Checkbox} val="Checkbox" onChange={(event) => setCheckbox(event.target.checked)}/>
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Textarea1: </Form.Label>
-                    <Form.Control type="textarea" placeholder="text" value={this.props.tArea1} val="tArea1" onChange={this.updateCard.bind(this)}/>
+                    <Form.Control type="textarea" placeholder="text" value={props.tArea1} val="tArea1" onChange={(event) => setTArea1(event.target.value)}/>
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Textarea2: </Form.Label>
-                    <Form.Control type="textarea" placeholder="text" value={this.props.tArea2} val="tArea2" onChange={this.updateCard.bind(this)}/>
+                    <Form.Control type="textarea" placeholder="text" value={props.tArea2} val="tArea2" onChange={(event) => setTArea2(event.target.value)}/>
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Textarea3: </Form.Label>
-                    <Form.Control type="textarea" placeholder="text" value={this.props.tArea3} val="tArea3" onChange={this.updateCard.bind(this)}/>
+                    <Form.Control type="textarea" placeholder="text" value={props.tArea3} val="tArea3" onChange={(event) => setTArea3(event.target.value)}/>
                 </Form.Group>
             </Form>
             <Card style={{ width: '18rem', backgroundColor:"gray"}}>
             <ListGroup variant="flush">
-                <ListGroup.Item>Text: {this.state.Text}</ListGroup.Item>
-                <ListGroup.Item>Checkbox: {"" + this.state.Checkbox}</ListGroup.Item>
-                <ListGroup.Item>TextArea1: {this.state.tArea1}</ListGroup.Item>
-                <ListGroup.Item>TextArea2: {this.state.tArea2}</ListGroup.Item>
-                <ListGroup.Item>TextArea3: {this.state.tArea3}</ListGroup.Item>
+                <ListGroup.Item>Text: {text}</ListGroup.Item>
+                <ListGroup.Item>Checkbox: {"" + checkbox}</ListGroup.Item>
+                <ListGroup.Item>TextArea1: {tArea1}</ListGroup.Item>
+                <ListGroup.Item>TextArea2: {tArea2}</ListGroup.Item>
+                <ListGroup.Item>TextArea3: {tArea3}</ListGroup.Item>
             </ListGroup>
             </Card>
-        </React.Fragment>);
-    }
-}
- 
-export default komponens1;
+        </React.Fragment>
+        );
+  }
+
+export default Komponens1;
