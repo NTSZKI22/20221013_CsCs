@@ -7,17 +7,17 @@ class komponens2 extends Component {
         <Accordion>
             <Accordion.Item>
                 <Accordion.Header>{this.props.text1.split(" ")[0]}</Accordion.Header>
-                <Accordion.Body>asd</Accordion.Body>
+                <Accordion.Body>{this.props.text1}</Accordion.Body>
             </Accordion.Item>
 
             <Accordion.Item>
-                <Accordion.Header>Accordion Item #2</Accordion.Header>
-                <Accordion.Body></Accordion.Body>
+                <Accordion.Header>{this.props.text2.split(" ")[0]}</Accordion.Header>
+                <Accordion.Body>{this.props.text2}</Accordion.Body>
             </Accordion.Item>
 
             <Accordion.Item>
-                <Accordion.Header>Accordion Item #3</Accordion.Header>
-                <Accordion.Body></Accordion.Body>
+                <Accordion.Header>{this.props.text3.split(" ")[0]}</Accordion.Header>
+                <Accordion.Body>{this.props.text3}</Accordion.Body>
             </Accordion.Item>
         </Accordion>
       );
