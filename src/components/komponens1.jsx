@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Select from 'react-select'
+import Komponens2 from '../components/komponens2';
 
 function Komponens1(props) {
     const [text, setText] = useState("");
@@ -48,6 +49,7 @@ function Komponens1(props) {
                 <ListGroup.Item>TextArea3: {tArea3}</ListGroup.Item>
             </ListGroup>
             </Card>
+        <Komponens2 text1={tArea1} text2={tArea2} text3={tArea3}/>
         </React.Fragment>
         );
   }
